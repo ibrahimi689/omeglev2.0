@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from "react"
-import "./common.css"
-import "./desktop.css"
 import "./mobile.css"
 
 export default function VideoChat({ socket, localStream, remoteStream, onSendTyping }) {
