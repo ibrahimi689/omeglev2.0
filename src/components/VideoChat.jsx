@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
-import "./mobile.css"
+import "../../style/mobile.css"
 
 export default function VideoChat({ socket, localStream, remoteStream, onSendTyping }) {
   const localVideoRef = useRef(null)
