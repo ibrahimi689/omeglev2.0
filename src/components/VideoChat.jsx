@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
-import "./video.css"
+import "./common.css"
+import "./desktop.css"
+import "./mobile.css"
 
 export default function VideoChat({ socket, localStream, remoteStream, onSendTyping }) {
   const localVideoRef = useRef(null)
@@ -29,9 +31,7 @@ export default function VideoChat({ socket, localStream, remoteStream, onSendTyp
       let data
       try {
         data = JSON.parse(event.data)
-      } catch {
-        return
-      }
+      } catch { return }
       switch (data.type) {
         case "chat":
           setMessages((prev) => [...prev, { sender: "stranger", text: data.text }])
