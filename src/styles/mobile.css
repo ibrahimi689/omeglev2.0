@@ -1,3 +1,11 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
 .video-section {
   flex: 1;
   position: relative;
@@ -7,7 +15,6 @@
   align-items: center;
 }
 
-/* Stranger box (main video container) */
 .stranger-box {
   width: 100%;
   height: 100%;
@@ -23,10 +30,10 @@
   object-fit: cover;
 }
 
-/* Default: Mobile layout */
+/* 👇 Selfie window (floating top-left) */
 .self-floating {
   position: absolute;
-  top: 10px;      /* 👈 upper-left corner */
+  top: 10px;
   left: 10px;
   width: 120px;
   height: 160px;
@@ -41,45 +48,53 @@
   object-fit: cover;
 }
 
-/* ✅ Desktop layout */
-@media (min-width: 1024px) {
-  .chat-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;  /* Left = chat, Right = videos */
-    grid-template-rows: auto 1fr auto;
-    height: 100vh;
-  }
+/* Chat box */
+.chat-box {
+  height: 150px;
+  overflow-y: auto;
+  padding: 8px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
 
-  .video-section {
-    grid-column: 2;
-    grid-row: 1 / span 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
+.msg {
+  margin: 4px 0;
+  padding: 6px 8px;
+  border-radius: 8px;
+  max-width: 70%;
+}
 
-  .self-floating {
-    position: static;   /* floating nahi hoga */
-    width: 90%;
-    height: 40%;
-    margin-bottom: 10px;
-  }
+.msg.you {
+  background: #e1ffc7;
+  align-self: flex-end;
+}
 
-  .remote-video {
-    width: 90%;
-    height: 50%;
-  }
+.msg.stranger {
+  background: #f1f1f1;
+  align-self: flex-start;
+}
 
-  .chat-box {
-    grid-column: 1;
-    grid-row: 2;
-    height: auto;
-    max-height: 60vh;
-  }
+.chat-input {
+  display: flex;
+  padding: 8px;
+  border-top: 1px solid #ddd;
+}
 
-  .chat-input {
-    grid-column: 1;
-    grid-row: 3;
-  }
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.send-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  margin-left: 8px;
+  font-size: 16px;
 }
