@@ -7,6 +7,7 @@
   align-items: center;
 }
 
+/* Stranger box (main video container) */
 .stranger-box {
   width: 100%;
   height: 100%;
@@ -22,9 +23,10 @@
   object-fit: cover;
 }
 
+/* Default: Mobile layout */
 .self-floating {
   position: absolute;
-  bottom: 80px;   /* chat-box से ऊपर */
+  top: 10px;      /* 👈 upper-left corner */
   left: 10px;
   width: 120px;
   height: 160px;
@@ -37,4 +39,47 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* ✅ Desktop layout */
+@media (min-width: 1024px) {
+  .chat-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;  /* Left = chat, Right = videos */
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+  }
+
+  .video-section {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .self-floating {
+    position: static;   /* floating nahi hoga */
+    width: 90%;
+    height: 40%;
+    margin-bottom: 10px;
+  }
+
+  .remote-video {
+    width: 90%;
+    height: 50%;
+  }
+
+  .chat-box {
+    grid-column: 1;
+    grid-row: 2;
+    height: auto;
+    max-height: 60vh;
+  }
+
+  .chat-input {
+    grid-column: 1;
+    grid-row: 3;
+  }
 }
