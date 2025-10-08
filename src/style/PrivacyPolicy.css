@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.privacy-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.header {
+  background: white;
+  padding: 12px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff6b35;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+  line-height: 1;
+}
+
+.main-content {
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.main-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.info-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #ccc;
+}
+
+.card--orange {
+  border-left-color: #ff6b35;
+}
+
+.card--green {
+  border-left-color: #4caf50;
+}
+
+.card--red {
+  border-left-color: #f44336;
+}
+
+.card--purple {
+  border-left-color: #9c27b0;
+}
+
+.card--yellow {
+  border-left-color: #ffc107;
+}
+
+.card--blue {
+  border-left-color: #2196f3;
+}
+
+.card--light {
+  border-left-color: #ffc107;
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+.feature-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.footer {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.footer-links {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.footer-link {
+  color: #ff6b35;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #e55a2b;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 24px;
+  }
+
+  .feature-title {
+    font-size: 15px;
+  }
+
+  .card-text {
+    font-size: 13px;
+  }
+}
