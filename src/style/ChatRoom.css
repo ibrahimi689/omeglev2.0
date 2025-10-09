@@ -217,6 +217,36 @@
   background-color: #ee3333;
 }
 
+.skip-btn {
+  background-color: #ff9500;
+}
+
+.skip-btn:hover {
+  background-color: #e88500;
+}
+
+.send-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.message.system {
+  background-color: #f0f0f0;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+  padding: 8px 16px;
+  margin: 8px auto;
+  border-radius: 20px;
+  max-width: 80%;
+}
+
+.message.stranger {
+  background-color: #e8f4ff;
+  align-self: flex-start;
+}
+
 @media (max-width: 768px) {
   .header-center {
     gap: 8px;
